@@ -1,22 +1,44 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
 import log from 'loglevel'
+import LogRocket from 'logrocket';
+
+// using logrocket
+LogRocket.init('p6aia1/ui-logger');
+/* 
+  Network Errors
+  JavaScript Errors
+  Rage Clicks
+  Dead Clicks
+  Frustrating Network Requests
+*/
+log.setDefaultLevel("TRACE")
 
 function App() {
+  
   const [count, setCount] = useState(0)
-  log.warn("UI - Logger")
+  log.warn("UI - Logger: Warn")
+  log.debug("UI - Logger: Debug")
+  log.info("UI - Logger: Info")
+  log.error("UI - Logger: Error")
+  log.trace("UI - Logger: Trace")
+
   return (
     <div className="App">
       <h1 onClick={ () => setCount(count + 1)}> UI - Logger {count} </h1>
-      <ul> <h4> Log Settings </h4>
+      <ul style={{ textAlign: 'left', color: '#aedaed' }}> <h4> Log Settings </h4>
         <li> log.setLevel("Debug", true) </li>
         <li> log.setDefaultLevel("TRACE") </li>
         <li> log.resetLevel() </li>
         <li> log.enableAll() </li>
         <li> log.disableAll() </li>
       </ul>
-    </div>
+      <h4> Log State </h4>
+        Uses the getLevel() method to display the current log level. Documentation for disableAll().
+        <div>
+          <h2> QUIC/http3 support </h2>
+        </div>
+      </div>
   )
 }
 
