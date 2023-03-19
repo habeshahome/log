@@ -5,12 +5,26 @@ import LogRocket from 'logrocket';
 
 // using logrocket
 LogRocket.init('p6aia1/ui-logger');
+LogRocket.identify("Bamlak K", {
+  name: 'Bamlak K',
+  email: 'bamlakk@gmail.com',
+  phone: '123-456-7890',
+});
+
 /* 
   Network Errors
-  JavaScript Errors
+  JavaScript Errors 
   Rage Clicks
   Dead Clicks
   Frustrating Network Requests
+*/
+/* 
+ User Monitoring 
+    Monitor your users' sessions in real-time
+    Replay their sessions to see what happened
+    Understand your users' behavior
+  Performance Monitoring 
+    Identify and fix bugs faster
 */
 log.setDefaultLevel("TRACE")
 
